@@ -80,7 +80,8 @@ In the Elixir cell below, create a string `"Hello, world!"`. This is a rite of p
 programmer.
 
 ```elixir
-
+hello = "Hello, world"
+IO.inspect(hello)
 ```
 
 ## Multiline Strings
