@@ -56,7 +56,11 @@ blank3 = "code"
 Enter your solution below.
 
 ```elixir
+loser = "loser"
+balls = "balls"
+cum = "cum"
 
+IO.puts("A programmer is a #{loser} that turns #{balls} into #{cum}")
 ```
 
 ## String Interpolation Madlib
