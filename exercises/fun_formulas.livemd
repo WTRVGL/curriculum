@@ -67,7 +67,9 @@ total = 42
 Enter your solution below.
 
 ```elixir
-
+amount = 12
+total = 42
+percentage = (amount / total) * 100
 ```
 
 ## Rocket Ship
@@ -93,7 +95,10 @@ mass * acceleration
 Enter your solution below.
 
 ```elixir
-
+mass = IO.gets("Enter mass: ")
+acceleration = IO.gets("Enter acceleration: ")
+force = mass * acceleration
+IO.inspect(force)
 ```
 
 ## What Do You Tip?
