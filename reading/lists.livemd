@@ -109,7 +109,7 @@ flowchart
 In the Elixir cell below, Create a list of your favourite foods as strings.
 
 ```elixir
-
+["chicken", "spaghetti", "pasta"]
 ```
 
 ## List Operators
@@ -127,7 +127,7 @@ List operators allow us to manipulate lists. Lists can be added together with `+
 Subtraction operations remove the leftmost elements first.
 
 ```elixir
-[3, 2, 4, 3, 2] -- [3, 2]
+[3, 2, 4, 3, 2] -- [10, 0]
 ```
 
 List operations occur from **right to left** unlike Arithmetic Operators, which can cause some unintuitive behavior. You might think the following operation should result in an empty list `[]`, but instead it returns `[2]`.
@@ -155,13 +155,13 @@ break up the operations into steps using the match operator.
 In the Elixir cell below, add `[1, 2, 3]` and `[4, 5, 6]` together to make `[1, 2, 3, 4, 5, 6].`
 
 ```elixir
-
+[1, 2, 3] ++ [4, 5, 6]
 ```
 
 In the Elixir cell below, remove `[1]` from `[1, 1, 2, 3]` to make `[1, 2, 3]`
 
 ```elixir
-
+[1, 1, 2, 3] -- [1]
 ```
 
 ## Head And Tail
@@ -213,7 +213,7 @@ list = [2, 3]
 In the Elixir cell below, prepend `"hello"` to the list `["world"]` to make `["hello", "world"]`
 
 ```elixir
-
+["hello" | ["world"]]
 ```
 
 ## Pattern Matching Lists
@@ -252,7 +252,7 @@ flowchart LR
 The **head** is the first element of the list.
 
 ```elixir
-[head | _tail] = [1, 2, 3, 4, 5, 6, 7]
+[head | _] = [1, 2, 3, 4, 5, 6, 7]
 head
 ```
 
@@ -286,7 +286,8 @@ Bind `1` in the following list to a variable `a` using pattern matching.
 Enter your solution below.
 
 ```elixir
-[1, 2, 3]
+[a | _] = [1, 2, 3]
+b
 ```
 
 Bind `1` in the following list to a variable `a` using pattern matching.
@@ -303,7 +304,7 @@ Bind `1` in the following list to a variable `a` using pattern matching.
 Enter your solution below.
 
 ```elixir
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+[a | _] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ```
 
 Bind `1` and `2`, and `3` in the following list to variables `a`, `b`, and `c` using pattern matching.
@@ -320,7 +321,8 @@ Bind `1` and `2`, and `3` in the following list to variables `a`, `b`, and `c` u
 Enter your solution below.
 
 ```elixir
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+[a, b, c | _l] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+IO.inspect(_l)
 ```
 
 ## Further Reading
